@@ -1,0 +1,22 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "akshay barapatre",
+      "email": "akshaybarapatre54@gmail.com",
+      "phone": 7768940850
+    },
+    {
+      "id": 2,
+      "name": "pratik barapatre",
+      "email": "pratik@gmail.com",
+      "phone": 8446040852
+    },
+    {
+      "id": 3,
+      "name": "shubham gadre",
+      "email": "shubham@gmail.com",
+      "phone": 8390743545
+    }
+  ]
+}
