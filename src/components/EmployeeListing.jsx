@@ -20,18 +20,24 @@ const EmployeeListing = () => {
   };
 
   //  Delete employee function
-  // const deleteEmployee = async (id) => {
-  //   try {
-  //     if (window.confirm("Do You want to delete the user??")) {
-  //       const response = await fetch(`http://localhost:8000/employee/${id}`, {
-  //         method: "DELETE",
-  //       });
-  //       Alert(`User with id ${id} Remved Succesfully`);
-  //     }
-  //   } catch (error) {
-  //     console.log(`Error in ${error}`);
-  //   }
-  // };
+  const deleteEmployee = async (id) => {
+    try {
+      if (window.confirm("Do you want to delete the user?")) {
+        const response = await fetch(`http://localhost:8000/employee/${id}`, {
+          method: "DELETE",
+        });
+        if (response.ok) {
+          alert(`User with ID ${id} removed successfully.`);
+          // Refresh the employee list after deletion
+          fetchData();
+        } else {
+          alert("Failed to delete user.");
+        }
+      }
+    } catch (error) {
+      console.log(`Error in ${error}`);
+    }
+  };
 
   return (
     <div className="container" style={{ padding: "50px" }}>
@@ -71,12 +77,12 @@ const EmployeeListing = () => {
                     >
                       Edit
                     </Link>
-                    {/* <Link
-                      onClick={deleteEmployee(employee.id)}
+                    <Link
+                      onClick={() => deleteEmployee(employee.id)}
                       className="btn btn-danger mx-1"
                     >
                       Delete
-                    </Link> */}
+                    </Link>
                     <Link
                       to={`/employee/details/${employee.id}`}
                       className="btn btn-primary mx-1"

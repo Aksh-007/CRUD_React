@@ -52,14 +52,14 @@ const CreateEmployee = () => {
         }}
       >
         <form style={{ width: "40%" }} onSubmit={handleSubmit}>
-          <div className="">
+          {/* <div className="">
             <label className="form-label">ID</label>
             <input
               name="id"
               disabled="disabled"
               className="form-control"
             ></input>
-          </div>
+          </div> */}
           <div className="mb-3">
             <label className="form-label">Name</label>
             <input
