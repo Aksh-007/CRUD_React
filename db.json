@@ -4,7 +4,7 @@
       "id": 1,
       "name": "akshay barapatre",
       "email": "akshaybarapatre54@gmail.com",
-      "phone": 7768940850
+      "phone": 7768940852
     },
     {
       "id": 2,
@@ -22,7 +22,19 @@
       "id": 4,
       "name": "Shoaib Akhtar",
       "email": "shoaib@gmail.com",
-      "phone": 1122334455
+      "phone": 445511122
+    },
+    {
+      "id": 5,
+      "name": "Rahul Bajpai",
+      "email": "rahul@gmail.com",
+      "phone": 8222451582
+    },
+    {
+      "id": 6,
+      "name": "Mayur kukade",
+      "email": "admin1@gmail.com",
+      "phone": 776895475
     }
   ]
 }

@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 const CreateEmployee = () => {
@@ -24,12 +25,29 @@ const CreateEmployee = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(inputFields);
+    // try {
+    //   const response = await fetch(`http://localhost:8000/employee`, {
+    //     method: "POST",
+    //     headers: { "content-type": "application/json" },
+    //     body: JSON.stringify(inputFields),
+    //   });
+    //   console.log(response);
+    //   alert("Saved successfully.");
+    //   navigate("/");
+    // } catch (error) {
+    //   console.log(`Error is ${error}`);
+    // }
+
     try {
-      const response = await fetch(`http://localhost:8000/employee`, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(inputFields),
-      });
+      const response = await axios.post(
+        `http://localhost:8000/employee`,
+        inputFields, // Pass inputFields directly as the request body
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       console.log(response);
       alert("Saved successfully.");
       navigate("/");
