@@ -1,4 +1,3 @@
-import { Alert } from "bootstrap";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 const EmployeeListing = () => {
@@ -22,7 +21,7 @@ const EmployeeListing = () => {
   //  Delete employee function
   const deleteEmployee = async (id) => {
     try {
-      if (window.confirm("Do you want to delete the user?")) {
+      if (window.confirm(`Do you want to delete the user?`)) {
         const response = await fetch(`http://localhost:8000/employee/${id}`, {
           method: "DELETE",
         });
