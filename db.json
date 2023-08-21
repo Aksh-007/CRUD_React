@@ -2,7 +2,7 @@
   "employee": [
     {
       "id": 1,
-      "name": "akshay barapatre",
+      "name": "Akshay Barapatre",
       "email": "akshaybarapatre54@gmail.com",
       "phone": 7768940852
     },
@@ -23,6 +23,12 @@
       "name": "Shoaib Akhtar",
       "email": "shoaib@gmail.com",
       "phone": 445511122
+    },
+    {
+      "id": 5,
+      "name": "Rahul Bajpai",
+      "email": "Rahul@gmail.com",
+      "phone": 822208243
     }
   ]
 }
